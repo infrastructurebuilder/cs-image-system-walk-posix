@@ -14,7 +14,7 @@ instances:
     # until an explicit `upgrade instance`; `follow` plans the gated
     # replacement whenever the image's head moves.
     storages:
-      - name: data
+      - name: posix-data
         mount_point: /mnt/data
     tags:
       role: node

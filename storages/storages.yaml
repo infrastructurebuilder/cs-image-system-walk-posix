@@ -5,7 +5,7 @@
 # state; a new storage starts `active` (the state machine refuses anything
 # else before the first apply) and later requests `archived` or `destroyed`.
 storages:
-  - name: data
+  - name: posix-data
     # DECISION: no `type`, so the default storage builder (aws-ebs) realizes it
     groups:                      # the groups allowed to attach; each gets a private /<group>/ subtree
       - walk_posix

@@ -6,10 +6,10 @@ set -euo pipefail
 hostnamectl set-hostname 'team-node-1-001' || true
 # owning group: walk_posix (gid by reference)
 GID="${group_gid}"
-# mount storage data (ebs) at /mnt/data
+# mount storage posix-data (ebs) at /mnt/data
 mkdir -p '/mnt/data'
 DEV='/dev/xvdf'
-VOL="${ebs["data"].volume_id}"
+VOL="${ebs["posix-data"].volume_id}"
 BYID="/dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_$(printf '%s' "$VOL" | tr -d -)"
 # the attachment lands after boot: wait for either name
 for i in $(seq 1 60); do [ -e "$DEV" ] && break; [ -e "$BYID" ] && DEV="$BYID" && break; sleep 2; done

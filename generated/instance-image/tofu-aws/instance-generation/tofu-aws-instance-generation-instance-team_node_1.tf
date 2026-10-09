@@ -14,9 +14,9 @@ module "instance_team_node_1" {
   tags                        = { "role" = "node" }
   user_data = templatefile("${path.module}/user-data-team_node_1.sh.tftpl", {
     "ebs" = {
-      "data" = {
+      "posix-data" = {
         "device_name" = "/dev/xvdf"
-        "volume_id"   = data.terraform_remote_state.aws_ebs.outputs.storage_data.volume_id
+        "volume_id"   = data.terraform_remote_state.aws_ebs.outputs.storage_posix_data.volume_id
       }
     }
     "efs"                  = {}
@@ -24,9 +24,9 @@ module "instance_team_node_1" {
     "sft_enrollment_token" = ""
   })
   ebs_volumes = {
-    "data" = {
+    "posix-data" = {
       "device_name" = "/dev/xvdf"
-      "volume_id"   = data.terraform_remote_state.aws_ebs.outputs.storage_data.volume_id
+      "volume_id"   = data.terraform_remote_state.aws_ebs.outputs.storage_posix_data.volume_id
     }
   }
 }

@@ -16,8 +16,8 @@ instances:
       mount_point: /mnt/data
       public_read: false
       share_mode: '2770'
-      storage: data
+      storage: posix-data
       type: ebs
-    run: 2026_10_09t20_03_50_286183
+    run: 2026_10_09t20_14_05_354595
     session: ssm
-    user_data_sha256: 5784e74ba0d686cc6da5a5a6057f964922071d5e830dae241e9e7bc4376c0489
+    user_data_sha256: 664ff45ce5ab4d14ba9c92eb83c9479526029c11e673ed4a3178bdbc355e88b7

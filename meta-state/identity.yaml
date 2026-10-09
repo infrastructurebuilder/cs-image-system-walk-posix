@@ -11,7 +11,7 @@ groups:
     - csis_proof
     - walker
 note: structural facts only; gids flow by terraform remote-state reference (N7)
-run: 2026_10_09t20_03_50_286183
+run: 2026_10_09t20_14_05_354595
 user_builders:
   posix-users: posix
 users:
