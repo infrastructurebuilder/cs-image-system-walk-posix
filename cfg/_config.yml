@@ -22,13 +22,12 @@ sleep_before_finalization: 1        # read, then logged as ignored: the runner s
 # example loads anywhere, protecting nothing.
 encryption:
   recipients:
-    - age1hl95vsankapyxyyejhdejmywuwc4ddvpjmflj0hf0y8xjtuk3vystd9ang   # REPLACE: your holders' age public keys, one per holder
+    - age1hg4md3my9yvmw3pmuck5z8mnfgqawv2c3v2hedkra6ttr5v644js96hen3   # the holder of this tree: the same identity as the first walk
 
 # What the public-safe scanner lets through, by decision (2.2). Everything
 # else that looks like a secret or a person refuses the commit.
 public_safe:
   allow:
-    - "path:.age-identity"          # the TEST identity, committed on purpose; DROP this line the day a real identity replaces it
     - "mykelalvis@infrastructurebuilder.org"   # the copyright holder in the SPDX header of every release-owned file: public by intent
 
 # Entries appended to the built-in gitignore list and written to generated/.gitignore.
