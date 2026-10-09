@@ -34,7 +34,7 @@ on:
         default: dry
 
 env:
-  PERFORM_RUNTIME: aws-REPLACE-ME          # the runtime `perform` drives (cfg/runtime-builders.yml)
+  PERFORM_RUNTIME: aws-main          # the runtime `perform` drives (cfg/runtime-builders.yml)
   GUARD_RUNTIME: ""                        # REPLACE-ME or empty: a runtime CI must never bake on; its emission may not change between records
   AWS_REGION: us-east-2                    # REPLACE-ME
   # a version pin for the release CI installs: the content of .csis-version, else the latest on PyPI

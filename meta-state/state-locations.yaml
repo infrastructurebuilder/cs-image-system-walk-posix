@@ -1,0 +1,23 @@
+workspaces:
+  aws-ebs:
+    backend: s3-main
+    bucket: csis-walk-tfstate-514190660293
+    encrypt: true
+    key: statefiles/cs-image-system-walk-posix/aws_ebs.tfstate
+    location: s3://csis-walk-tfstate-514190660293/statefiles/cs-image-system-walk-posix/aws_ebs.tfstate
+    profile: noaa
+    region: us-east-2
+    run: 2026_10_09t19_40_35_606064
+    type: s3
+    use_lockfile: true
+  tofu-aws:
+    backend: s3-main
+    bucket: csis-walk-tfstate-514190660293
+    encrypt: true
+    key: statefiles/cs-image-system-walk-posix/tofu_aws.tfstate
+    location: s3://csis-walk-tfstate-514190660293/statefiles/cs-image-system-walk-posix/tofu_aws.tfstate
+    profile: noaa
+    region: us-east-2
+    run: 2026_10_09t19_40_35_606064
+    type: s3
+    use_lockfile: true

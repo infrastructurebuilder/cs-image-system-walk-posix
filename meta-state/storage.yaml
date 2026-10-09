@@ -1,0 +1,18 @@
+run: 2026_10_09t19_40_35_606064
+storages:
+  data:
+    allowed_groups:
+    - walk_posix
+    attachment_cardinality: single
+    attachments:
+    - team-node-1
+    builder: aws-ebs
+    current_state: null
+    generation: 1
+    lifecycle: {}
+    plugin: tf-aws-ebs
+    posix: true
+    public_read: false
+    requested_state: active
+    share_mode: '2770'
+    type: ebs

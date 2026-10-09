@@ -1,31 +1,17 @@
 ---
-# docs/examples/standard-aws-posix/groups/users.yaml -- the roster.
-# Reference: ../../../CONFIGURATION.md section 11.6. Each user is a POSIX
-# account on the machines of its groups' images: its `uid:` (at least 1024,
-# the same on every machine), a private group of the same name and id, a
-# home, and exactly its `public_keys:` as the way in. These two people are
-# synthetic personas; replace them with yours.
+# The roster of the posix walk: one person and the proof user. Each is a
+# POSIX account on the group's machines, with exactly these keys as the way in.
 users:
-  - name: avery_alpha            # REPLACE: a POSIX name
-    first_name: Avery
-    last_name: Alpha
-    uid: 3001                    # REPLACE
+  - name: walker
+    first_name: Walker
+    last_name: Operator
+    uid: 3001
     public_keys:
-      - ssh-ed25519 REPLACE-ME-avery-public-key avery_alpha
-  - name: casey_charlie          # REPLACE
-    first_name: Casey
-    last_name: Charlie
-    uid: 3002                    # REPLACE
-    public_keys:
-      - ssh-ed25519 REPLACE-ME-casey-public-key casey_charlie
-  # DECISION: the proof user. CI's perform job logs in as it, over ssh through
-  # the runtime's session tunnel, and checks it is in the group; its private
-  # key is the repository secret CSIS_PROOF_SSH_KEY (CI_SETUP.md section 3.7).
-  # Make a key pair for it alone: `ssh-keygen -t ed25519 -f csis_proof -N ''`.
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgFdymhvp9KiAEgGAkl6BVnDfH4oVoDbzdXSNTydXGy walker
   - name: csis_proof
     first_name: Proof
     last_name: User
     is_service_account: true
-    uid: 3999                    # REPLACE if it collides
+    uid: 3999
     public_keys:
-      - ssh-ed25519 REPLACE-ME-proof-public-key csis_proof
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfRMJnstfEIAIN/fwbeQ6vD3ZI6a1Q3992HMf1RwRYu csis_proof

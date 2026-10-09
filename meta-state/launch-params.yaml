@@ -1,0 +1,23 @@
+instances:
+  team-node-1:
+    build: unbound
+    enrollment: {}
+    ephemeral: false
+    group: walk_posix
+    hostname: team-node-1-001
+    identity_type: posix
+    image: team-node
+    launched: false
+    machine_type: t3.medium
+    mounts:
+    - builder: aws-ebs
+      device: /dev/xvdf
+      group: walk_posix
+      mount_point: /mnt/data
+      public_read: false
+      share_mode: '2770'
+      storage: data
+      type: ebs
+    run: 2026_10_09t19_40_35_606064
+    session: ssm
+    user_data_sha256: 5784e74ba0d686cc6da5a5a6057f964922071d5e830dae241e9e7bc4376c0489

@@ -1,0 +1,19 @@
+groups:
+  walk_posix:
+    admins:
+    - walker
+    builder: posix-local
+    gid_policy: config-time
+    identity_type: posix
+    is_root: true
+    managed: true
+    members:
+    - csis_proof
+    - walker
+note: structural facts only; gids flow by terraform remote-state reference (N7)
+run: 2026_10_09t19_40_35_606064
+user_builders:
+  posix-users: posix
+users:
+- csis_proof
+- walker

@@ -7,7 +7,7 @@
 # is a DECISION: the comment beside it says what was decided and what the
 # alternatives are.
 
-id: my-team-images-REPLACE-ME       # REPLACE: the configuration's identifier (any string; it names nothing in the cloud)
+id: cs-image-system-walk-posix
 generation_directory: ./generated/  # DECISION: where a run writes its emission; the default is `generated` (same place)
 # DECISION: the timestamp format baked into every generated image name. The
 # default is %Y-%m-%d-%H%M%S; this compact form sorts the same and is shorter
@@ -57,4 +57,4 @@ config:
   # (a list; rotation = add the new key, migrate, remove the old). Anything
   # resembling private-key material is refused at load.
   admin_public_keys:
-    - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlaceholderKeyReplaceMeReplaceMeReplaceMe csis-admin-REPLACE-ME"   # REPLACE: an operator's public key
+    - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMIgIcl+Fgs5qoSEa+EphyYGuHUngHf+Wai+/O+0wegN csis-walk-admin"   # the operator's public key, the same as the first walk's
