@@ -1,0 +1,43 @@
+# cs-image-system bootstrap: the answers (stage 70). Written whole for the
+# posix walk and not asked, so that no default is taken unread; a run
+# regenerates generated/bootstrap/ from this file.
+version: 1
+sections:
+  aws:
+    account_id: '514190660293'
+    instance_profile: AmazonSSMRoleForInstancesQuickSetup
+    instance_profile_exists: true
+    oidc_provider_exists: true
+    owner_id: '50206755'
+    production_branch: main
+    profile: noaa
+    read_extra_subjects: ''
+    read_role_exists: false
+    read_role_name: csis-walk-posix-readonly
+    region: us-east-2
+    repo_id: '1412381929'
+    repository: infrastructurebuilder/cs-image-system-walk-posix
+    state_bucket: csis-walk-tfstate-514190660293
+    state_bucket_exists: true
+    state_prefix: statefiles/cs-image-system-walk-posix/
+    state_region: us-east-2
+    subject_forms: ids
+    tags: Environment=development,Project=cs-image-system-walk-posix
+    wanted: true
+    write_extra_subjects: ''
+    write_role_exists: false
+    write_role_name: csis-walk-posix-apply
+  gcp:
+    wanted: false
+  github:
+    aws_region: us-east-2
+    default_branch: develop
+    guard_runtime: ''
+    perform_runtime: aws-main
+    production_branch: main
+    protect_production: true
+    repository: infrastructurebuilder/cs-image-system-walk-posix
+    secrets_dir: /home/mykel.alvis/walk-posix-secrets
+    wanted: true
+  okta:
+    wanted: false
