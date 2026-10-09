@@ -79,3 +79,16 @@ runs:
   requested:
   - storage
   run: 2026_10_09t20_35_55_323950
+- apply:
+    base-image: stale-script-skipped
+    identity: no-script
+    instance-image: stale-script-skipped
+    release: no-script
+    retention: no-script
+    storage: executed
+  dry_run: false
+  error: null
+  ok: true
+  requested:
+  - storage
+  run: 2026_10_09t20_42_50_672083

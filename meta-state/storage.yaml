@@ -1,4 +1,4 @@
-run: 2026_10_09t20_35_55_323950
+run: 2026_10_09t20_42_50_672083
 storages:
   posix-data:
     allowed_groups:
@@ -7,7 +7,7 @@ storages:
     attachments:
     - team-node-1
     builder: aws-ebs
-    current_state: null
+    current_state: active
     generation: 1
     lifecycle: {}
     plugin: tf-aws-ebs

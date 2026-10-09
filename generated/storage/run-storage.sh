@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # cs-image-system lifecycle runner: storage
-# run id: 2026_10_09t20_35_55_323950
+# run id: 2026_10_09t20_42_50_672083
 # Deferred commands accumulated while generating this lifecycle,
 # in phase order. Paths are relative to this lifecycle's directory.
 # state: workspace aws-ebs -> s3://csis-walk-tfstate-514190660293/statefiles/cs-image-system-walk-posix/aws_ebs.tfstate
@@ -15,3 +15,5 @@ CSIS_ROOT="$(cd "../.." && pwd)"   # the configuration root, relative to this sc
 ( cd "aws-ebs/storage-generation" && cd "$(cs-image-system materialize . --root-dir "$CSIS_ROOT")" && tofu init -input=false -reconfigure -backend-config=aws-ebs-storage-generation.tfbackend.hcl )
 ( cd "aws-ebs/storage-generation" && cd "$(cs-image-system materialize . --root-dir "$CSIS_ROOT")" && tofu plan -input=false -out=tfplan )
 ( cd "aws-ebs/storage-generation" && cd "$(cs-image-system materialize . --root-dir "$CSIS_ROOT")" && cs-image-system gate-plan --planfile tfplan --tofu tofu )
+( cd "aws-ebs/storage-generation" && cd "$(cs-image-system materialize . --root-dir "$CSIS_ROOT")" && cs-image-system apply-check --lifecycle storage --root aws-ebs --root-alias aws-main )
+( cd "aws-ebs/storage-generation" && cd "$(cs-image-system materialize . --root-dir "$CSIS_ROOT")" && tofu apply -input=false tfplan )

@@ -1,0 +1,13 @@
+storages:
+  posix-data:
+    facts:
+      archive: csis-posix-data-archive
+      builder: aws-ebs
+      type: ebs
+    generation: 1
+    history:
+    - from: null
+      generation: 1
+      run: 2026_10_09t20_42_50_672083
+      to: active
+    state: active
