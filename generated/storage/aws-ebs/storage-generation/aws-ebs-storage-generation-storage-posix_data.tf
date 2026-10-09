@@ -6,7 +6,7 @@ module "storage_posix_data" {
   volume_type = "gp3"
   encrypted   = true
   name        = "posix-data"
-  size        = 100
+  size        = 10
   subnet_id   = "subnet-09f79018af845358a"
   tags        = { "Project" = "cs-image-system-walk-posix", "purpose" = "data" }
 }
