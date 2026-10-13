@@ -15,10 +15,6 @@ provider "aws" {
   profile = "noaa"
   alias   = "tofu_aws"
 }
-variable "team_node_1_ami_id" {
-  type    = string
-  default = ""
-}
 variable "sft_enrollment_token" {
   type        = string
   default     = ""
