@@ -1,0 +1,26 @@
+proofs:
+- as: proof key
+  checks:
+  - detail: CSIS_PROOF_SSH_KEY holds the proof user's key
+    name: proof key
+    ok: true
+  - detail: through aws ssm
+    name: tunnel
+    ok: true
+  - detail: logged in as csis_proof over ssh
+    name: login
+    ok: true
+  - detail: csis_proof is in walk_posix
+    name: in its group
+    ok: true
+  evidence:
+  - uid=3999(csis_proof) gid=3999(csis_proof) groups=3999(csis_proof),3000(walk_posix)
+    context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+  - 'Warning: Permanently added ''team-node-1'' (ED25519) to the list of known hosts.'
+  group: walk_posix
+  hostname: team-node-1-001
+  instance: team-node-1
+  ok: true
+  run: 2026_10_13t14_51_16_546106
+  runtime: aws-main
+  time: '2026-10-13T14:51:22+00:00'

@@ -19,6 +19,6 @@ instances:
       share_mode: '2770'
       storage: posix-data
       type: ebs
-    run: 2026_10_13t14_45_16_354808
+    run: 2026_10_13t14_55_05_521007
     session: ssm
     user_data_sha256: 664ff45ce5ab4d14ba9c92eb83c9479526029c11e673ed4a3178bdbc355e88b7

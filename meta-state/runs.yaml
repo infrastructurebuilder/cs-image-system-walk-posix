@@ -175,3 +175,21 @@ runs:
   requested:
   - instance-image
   run: 2026_10_13t14_45_16_354808
+- apply:
+    base-image: no-script
+    identity: no-script
+    instance-image: dry-run
+    release: no-script
+    retention: no-script
+    storage: dry-run
+  dry_run: true
+  error: null
+  ok: true
+  requested:
+  - identity
+  - storage
+  - base-image
+  - instance-image
+  - release
+  - retention
+  run: 2026_10_13t14_55_05_521007
