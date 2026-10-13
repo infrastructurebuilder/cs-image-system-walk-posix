@@ -1,6 +1,6 @@
 instances:
   team-node-1:
-    build: unbound
+    build: ami-0b636316bd048fa4e
     enrollment: {}
     ephemeral: false
     group: walk_posix
@@ -18,6 +18,6 @@ instances:
       share_mode: '2770'
       storage: posix-data
       type: ebs
-    run: 2026_10_13t14_18_10_315784
+    run: 2026_10_13t14_31_16_391333
     session: ssm
     user_data_sha256: 664ff45ce5ab4d14ba9c92eb83c9479526029c11e673ed4a3178bdbc355e88b7

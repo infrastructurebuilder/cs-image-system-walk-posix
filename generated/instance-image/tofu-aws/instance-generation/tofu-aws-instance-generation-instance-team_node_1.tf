@@ -4,8 +4,7 @@ module "instance_team_node_1" {
   source                      = "../../../../tfmodules/aws_instance"
   providers                   = { aws = aws.tofu_aws }
   name                        = "team-node-1"
-  ami_id                      = var.team_node_1_ami_id
-  ami_name_pattern            = "team-node-packer-ebs*"
+  ami_id                      = "ami-0b636316bd048fa4e"
   instance_type               = "t3.medium"
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.csis_instances.id, "sg-03015ec107ae5f81a"]
