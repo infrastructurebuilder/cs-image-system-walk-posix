@@ -6,5 +6,5 @@ idempotent: unknown
 image: team-node
 name: site-files
 operation: bash
-run: 2026_10_09t20_14_05_354595
+run: 2026_10_13t14_07_22_809752
 type: bash

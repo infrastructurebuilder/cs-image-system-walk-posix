@@ -5,5 +5,5 @@ idempotent: ansible
 image: team-node
 name: base-tools
 operation: ansible
-run: 2026_10_09t20_14_05_354595
+run: 2026_10_13t14_07_22_809752
 type: ansible

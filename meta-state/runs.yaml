@@ -92,3 +92,21 @@ runs:
   requested:
   - storage
   run: 2026_10_09t20_42_50_672083
+- apply:
+    base-image: dry-run
+    identity: no-script
+    instance-image: dry-run
+    release: no-script
+    retention: no-script
+    storage: dry-run
+  dry_run: true
+  error: null
+  ok: true
+  requested:
+  - identity
+  - storage
+  - base-image
+  - instance-image
+  - release
+  - retention
+  run: 2026_10_13t14_07_22_809752
