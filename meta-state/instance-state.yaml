@@ -1,6 +1,11 @@
 instances:
   team-node-1:
-    current:
+    generation:
+      durable: 1
+      ephemeral: 0
+    history:
+    - closed_at: '2026-10-13T19:39:58+00:00'
+      closed_run: 2026_10_13t19_38_07_664442
       how: observed
       instance_id: i-023b91dd1ac34ba20
       kind: durable
@@ -31,7 +36,4 @@ instances:
       opened_at: '2026-10-13T14:47:07+00:00'
       opened_run: 2026_10_13t14_45_16_354808
       provider_hostname: ip-10-26-35-200.us-east-2.compute.internal
-    generation:
-      durable: 1
-      ephemeral: 0
-    history: []
+      why: decommission

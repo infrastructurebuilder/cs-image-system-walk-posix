@@ -328,3 +328,16 @@ runs:
   requested:
   - instance-image
   run: 2026_10_13t19_33_08_699807
+- apply:
+    base-image: no-script
+    identity: no-script
+    instance-image: executed
+    release: no-script
+    retention: no-script
+    storage: stale-script-skipped
+  dry_run: false
+  error: null
+  ok: true
+  requested:
+  - instance-image
+  run: 2026_10_13t19_38_07_664442

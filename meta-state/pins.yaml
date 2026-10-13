@@ -1,7 +1,6 @@
 images:
   team-node@aws-main: ami-0ca7aa2fef7e25978
-instances:
-  team-node-1: ami-0b636316bd048fa4e
+instances: {}
 upgrades:
 - kind: image
   name: team-node@aws-main
@@ -14,3 +13,9 @@ upgrades:
   op: bind
   run: 2026_10_13t14_31_16_391333
   to: ami-0b636316bd048fa4e
+- from: ami-0b636316bd048fa4e
+  kind: instance
+  name: team-node-1
+  op: decommission
+  run: 2026_10_13t19_38_07_664442
+  to: null
