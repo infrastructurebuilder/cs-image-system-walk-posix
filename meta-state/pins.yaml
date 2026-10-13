@@ -1,5 +1,4 @@
-images:
-  team-node@aws-main: ami-0ca7aa2fef7e25978
+images: {}
 instances: {}
 upgrades:
 - kind: image
@@ -18,4 +17,10 @@ upgrades:
   name: team-node-1
   op: decommission
   run: 2026_10_13t19_38_07_664442
+  to: null
+- from: ami-0ca7aa2fef7e25978
+  kind: image
+  name: team-node@aws-main
+  op: dispose
+  run: 2026_10_13t19_56_44_898226
   to: null
