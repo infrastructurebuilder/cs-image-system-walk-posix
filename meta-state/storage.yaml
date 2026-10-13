@@ -1,18 +1,17 @@
-run: 2026_10_13t18_04_36_073595
+run: 2026_10_13t20_02_58_834488
 storages:
   posix-data:
     allowed_groups:
     - walk_posix
     attachment_cardinality: single
-    attachments:
-    - team-node-1
+    attachments: []
     builder: aws-ebs
-    current_state: active
+    current_state: destroyed
     generation: 1
     lifecycle: {}
     plugin: tf-aws-ebs
     posix: true
     public_read: false
-    requested_state: active
+    requested_state: destroyed
     share_mode: '2770'
     type: ebs
