@@ -128,3 +128,19 @@ runs:
   - release
   - retention
   run: 2026_10_13t14_17_28_585411
+- apply:
+    base-image: executed
+    identity: no-script
+    instance-image: executed
+    release: no-script
+    retention: no-script
+    storage: stale-script-skipped
+  dry_run: false
+  error: null
+  ok: true
+  requested:
+  - base-image
+  - instance-image
+  - release
+  - retention
+  run: 2026_10_13t14_18_10_315784
