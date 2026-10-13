@@ -24,3 +24,31 @@ proofs:
   run: 2026_10_13t14_51_16_546106
   runtime: aws-main
   time: '2026-10-13T14:51:22+00:00'
+- as: proof key
+  checks:
+  - detail: CSIS_PROOF_SSH_KEY holds the proof user's key
+    name: proof key
+    ok: true
+  - detail: through aws ssm
+    name: tunnel
+    ok: true
+  - detail: 'ssh csis_proof@team-node-1 id: exit 255 -- ts::514190660293:assumed-role/csis-walk-posix-readonly/GitHubActions
+      is not authorized to perform: ssm:StartSession on resource: arn:aws:ec2:us-east-2:514190660293:instance/i-023b91dd1ac34ba20
+      because no identity-based policy allows the ssm:StartSession action
+
+      Connection closed by UNKNOWN port 65535'
+    name: login
+    ok: false
+  evidence:
+  - 'aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartSession
+    operation: User: arn:aws:sts::514190660293:assumed-role/csis-walk-posix-readonly/GitHubActions
+    is not authorized to perform: ssm:StartSession on resource: arn:aws:ec2:us-east-2:514190660293:instance/i-023b91dd1ac34ba20
+    because no identity-based policy allows the ssm:StartSession action'
+  - Connection closed by UNKNOWN port 65535
+  group: walk_posix
+  hostname: team-node-1-001
+  instance: team-node-1
+  ok: false
+  run: 2026_10_13t15_14_22_121695
+  runtime: aws-main
+  time: '2026-10-13T15:14:23+00:00'
