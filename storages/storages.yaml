@@ -10,6 +10,6 @@ storages:
     groups:                      # the groups allowed to attach; each gets a private /<group>/ subtree
       - walk_posix
     share_mode: "2770"           # DECISION: private per-group subtree (default); "2775" shares reads between allowed groups
-    state: active
+    state: destroyed
     tags:
       purpose: data
